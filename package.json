@@ -12,6 +12,7 @@
     "push": "docker build -t mituta/ecoton-frontend . && docker push mituta/ecoton-frontend"
   },
   "dependencies": {
+    "@fontsource/montserrat-alternates": "^5.1.0",
     "@fontsource/open-sans": "^5.1.0",
     "@headlessui/react": "^2.1.8",
     "@heroicons/react": "^2.1.5",
