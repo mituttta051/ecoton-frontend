@@ -1,6 +1,7 @@
-import { Button, Checkbox, Label, Select, TextInput } from "flowbite-react";
+import {Button, Label, Select, TextInput} from "flowbite-react";
 import Link from "next/link";
 import React from "react";
+
 const Login = () => {
     return (
         <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] p-10 border rounded-xl">

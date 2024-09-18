@@ -13,7 +13,7 @@ const columnEventMapping: { [key: string]: keyof EventEntity } = {
     "id": "id",
     "название": "name",
     "организатор": "organizers",
-    "дата": "dateTime",
+    "дата": "date",
     "описание": "description",
     "количество участников": "participantsAmount",
     "организаторы": "organizers"
