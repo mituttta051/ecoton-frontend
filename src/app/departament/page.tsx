@@ -11,7 +11,7 @@ export default function Home() {
             mapsId: 123456,
             location: "Москва, Россия",
             date: "2023-10-01T10:00:00Z",
-            organizers: "Organizer 2",
+            organizer: "Organizer 2",
             participantsAmount: 100,
             imageUrl: "ecology.jpg"
         },
@@ -22,7 +22,7 @@ export default function Home() {
             mapsId: 654321,
             location: "Москва, Россия",
             date: "2023-11-01T10:00:00Z",
-            organizers: "Organizer 4",
+            organizer: "Organizer 4",
             participantsAmount: 150,
             imageUrl: "ecology.jpg"
         },
@@ -33,7 +33,7 @@ export default function Home() {
             mapsId: 789012,
             location: "Москва, Россия",
             date: "2023-12-01T10:00:00Z",
-            organizers: "Organizer 5",
+            organizer: "Organizer 5",
             participantsAmount: 200,
             imageUrl: "ecology.jpg"
         }
