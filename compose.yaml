@@ -1,0 +1,9 @@
+name: ecoton-frontend
+
+services:
+  ecoton-frontend:
+    image: 'mituta/ecoton-frontend'
+    tty: true
+    container_name: 'ecoton-frontend'
+    ports:
+      - '3000:3000'
