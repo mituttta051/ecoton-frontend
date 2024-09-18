@@ -10,10 +10,27 @@ const config: Config = {
     ],
     theme: {
         extend: {
-            colors: {
-                background: "var(--background)",
-                foreground: "var(--foreground)",
+            fontFamily: {
+                sans: ['"Open Sans"', 'sans-serif'],
             },
+            boxShadow: {
+                'custom': '5px 4px 7.5px 0px #00000040',
+            },
+            colors: {
+                'default': {
+                    '50': '#f7f6f5',
+                    '100': '#edebe7',
+                    '200': '#dbd5cd',
+                    '300': '#bcb2a3',
+                    '400': '#ab9d8c',
+                    '500': '#9a8775',
+                    '600': '#8d7869',
+                    '700': '#766458',
+                    '800': '#61524b',
+                    '900': '#50453e',
+                    '950': '#2a2320',
+                },
+            }
         },
     },
     plugins: [flowbite.plugin()],
