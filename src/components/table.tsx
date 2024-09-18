@@ -12,11 +12,11 @@ type CombinedEntity = EventEntity | OrganizerEntity | ParticipantEntity;
 const columnEventMapping: { [key: string]: keyof EventEntity } = {
     "id": "id",
     "название": "name",
-    "организатор": "organizers",
+    "организатор": "organizer",
     "дата": "date",
     "описание": "description",
     "количество участников": "participantsAmount",
-    "организаторы": "organizers"
+    "организаторы": "organizer"
 };
 
 const columnParticipantMapping: { [key: string]: keyof ParticipantEntity } = {

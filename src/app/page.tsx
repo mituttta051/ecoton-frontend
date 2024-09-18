@@ -1,8 +1,7 @@
-import Container from "@/components/Container";
 import EventCard from "@/components/event-card";
 import EventGallery from "@/components/event-gallery";
-import Header from "@/components/Header";
 import { EventEntity } from "@/utils/event-entity";
+import Header from "@/components/Header";
 
 export default function Home() {
     const eventEntities: EventEntity[] = [
@@ -13,7 +12,7 @@ export default function Home() {
             mapsId: 123456,
             location: "Москва, Россия",
             date: "2023-10-01T10:00:00Z",
-            organizers: "Organizer 2",
+            organizer: "Organizer 2",
             participantsAmount: 100,
             imageUrl: "ecology.jpg",
             isEditable: false,
@@ -25,7 +24,7 @@ export default function Home() {
             mapsId: 654321,
             location: "Москва, Россия",
             date: "2023-11-01T10:00:00Z",
-            organizers: "Organizer 4",
+            organizer: "Organizer 4",
             participantsAmount: 150,
             imageUrl: "ecology.jpg",
             isEditable: false,
@@ -37,7 +36,7 @@ export default function Home() {
             mapsId: 789012,
             location: "Москва, Россия",
             date: "2023-12-01T10:00:00Z",
-            organizers: "Organizer 5",
+            organizer: "Organizer 5",
             participantsAmount: 200,
             imageUrl: "ecology.jpg",
             isEditable: false,
@@ -49,7 +48,7 @@ export default function Home() {
             mapsId: 789012,
             location: "Москва, Россия",
             date: "2023-12-01T10:00:00Z",
-            organizers: "Organizer 5",
+            organizer: "Organizer 5",
             participantsAmount: 200,
             imageUrl: "ecology.jpg",
             isEditable: false,
@@ -61,7 +60,7 @@ export default function Home() {
             mapsId: 789012,
             location: "Москва, Россия",
             date: "2023-12-01T10:00:00Z",
-            organizers: "Organizer 5",
+            organizer: "Organizer 5",
             participantsAmount: 200,
             imageUrl: "ecology.jpg",
             isEditable: false,
@@ -73,7 +72,7 @@ export default function Home() {
             mapsId: 789012,
             location: "Москва, Россия",
             date: "2023-12-01T10:00:00Z",
-            organizers: "Organizer 5",
+            organizer: "Organizer 5",
             participantsAmount: 200,
             imageUrl: "ecology.jpg",
             isEditable: false,
@@ -81,11 +80,12 @@ export default function Home() {
     ];
 
     return (
-        <>
-            <Container>
-                <Header />
-                <EventGallery events={eventEntities} />
-            </Container>
-        </>
+        <div className={"h-full"}>
+            <img src="leaves/leaf1.svg" alt="leave" className="absolute top-0 left-72"/>
+            <div className={"px-[100px] my-5"}>
+                <Header/>
+                <EventGallery events={eventEntities}/>
+            </div>
+        </div>
     );
 }

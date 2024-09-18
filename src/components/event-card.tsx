@@ -13,8 +13,9 @@ interface EventCardProps {
 
 export default function EventCard(props: EventCardProps) {
     return (
-        <div className="flex justify-center min-w-[330px] font-sans w-full h-full relative">
-            <div className="bg-white border border-gray-200 rounded-[8px] flex flex-col content-between max-w-[335px] p-[22px] min-h-[490px] shadow-custom">
+        <div className="flex justify-center min-w-[330px] font-sans w-full h-full">
+            <div
+                className="bg-white border border-gray-200 rounded-[8px] flex flex-col content-between p-[22px] min-h-[490px] shadow-custom">
                 <img
                     className="rounded-[5px]"
                     src={props.imageUrl}
@@ -23,7 +24,7 @@ export default function EventCard(props: EventCardProps) {
 
                 <div className="p-5 flex flex-col justify-between h-full gap-4">
                     <div>
-                        <h5 className="mb-4 text-2xl font-bold tracking-tight text-gray-900">
+                        <h5 className="mb-4 text-xl font-bold tracking-tight text-gray-900">
                             {props.title}
                         </h5>
                         <p className="mb-3 font-normal text-gray-700 text-sm sm:text-sm md:text-lg lg:text-lg xl:text-lg">

@@ -5,7 +5,7 @@ export interface EventEntity {
     mapsId: number;
     location: string;
     date: string;
-    organizers: string;
+    organizer: string;
     participantsAmount: number;
     imageUrl: string;
     isEditable: boolean;

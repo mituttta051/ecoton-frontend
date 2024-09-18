@@ -12,6 +12,7 @@ const config: Config = {
         extend: {
             fontFamily: {
                 sans: ['"Open Sans"', 'sans-serif'],
+                montserrat: ['Montserrat Alternates', 'sans-serif'],
             },
             boxShadow: {
                 'custom': '5px 4px 7.5px 0px #00000040',
