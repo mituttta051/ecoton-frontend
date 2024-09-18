@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React, {useState} from 'react';
-import {EventEntity} from "@/utils/event-entity";
+import React, { useState } from "react";
+import { EventEntity } from "@/utils/event-entity";
 import EventCard from "@/components/event-card";
 
 enum PageState {
@@ -14,17 +14,16 @@ interface EventGalleryProps {
     events: EventEntity[];
 }
 
-
 export default function EventGallery(props: EventGalleryProps) {
     const [pageState, setPageState] = useState<PageState>(PageState.SUCCESS);
     const [error, setError] = useState<number>(0);
 
     return (
-        <div className={'min-h-[1000px] w-full px-[100px] my-5'}>
+        <div className={"min-h-[1000px] w-full px-[50px] my-5"}>
             {(pageState === PageState.LOADING && (
-                    <div
-                        className="grid gap-[100px] grid-cols-2 mx-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:mx-[100px] mb-12">
-                        {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((index: number) => (
+                <div className="grid gap-[100px] grid-cols-2 mx-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:mx-[100px] mb-12">
+                    {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map(
+                        (index: number) => (
                             <div
                                 key={index}
                                 role="status"
@@ -32,23 +31,27 @@ export default function EventGallery(props: EventGalleryProps) {
                             >
                                 <span className="sr-only">Loading...</span>
                             </div>
-                        ))}
-                    </div>
-                )) ||
+                        )
+                    )}
+                </div>
+            )) ||
                 (pageState === PageState.SUCCESS && (
                     <>
                         {props.events.length > 0 ? (
-                            <div
-                                className="grid gap-[100px] grid-cols-3 justify-items-stretch">
+                            <div className="grid gap-[100px] grid-cols-3 justify-items-stretch">
                                 {props.events.map(
                                     (item: EventEntity, index: number) => (
-                                        <EventCard key={index}
+                                        <EventCard
+                                            key={index}
                                             date={item.date}
                                             description={item.description}
-                                            imageUrl={item.imageUrl} location={item.location}
+                                            imageUrl={item.imageUrl}
+                                            location={item.location}
                                             organizer={item.organizers}
-                                            title={item.name}/>
-                                    ),
+                                            title={item.name}
+                                            isEditable={item.isEditable}
+                                        />
+                                    )
                                 )}
                             </div>
                         ) : (
@@ -57,7 +60,8 @@ export default function EventGallery(props: EventGalleryProps) {
                             </div>
                         )}
                     </>
-                )) || (pageState === PageState.ERROR && <div>Ошибка: {error}</div>)}
+                )) ||
+                (pageState === PageState.ERROR && <div>Ошибка: {error}</div>)}
         </div>
     );
 }

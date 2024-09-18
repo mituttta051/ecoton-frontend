@@ -1,3 +1,6 @@
+"use client";
+
+import BackButton from "@/components/Back-Button";
 import Container from "@/components/Container";
 import Header from "@/components/Header";
 import {
@@ -14,6 +17,7 @@ const AddEvent = () => {
     return (
         <Container>
             <Header />
+            <BackButton />
             <div className="w-[1000px] p-5 border m-auto rounded-xl">
                 <div className="w-[500px] mb-5">
                     <div>

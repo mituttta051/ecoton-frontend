@@ -1,10 +1,12 @@
 import Container from "@/components/Container";
-import EventCard from "@/components/event-card";
 import EventGallery from "@/components/event-gallery";
 import Header from "@/components/Header";
 import { EventEntity } from "@/utils/event-entity";
+import { Button } from "flowbite-react";
+import Link from "next/link";
+import React from "react";
 
-export default function Home() {
+const Events = () => {
     const eventEntities: EventEntity[] = [
         {
             id: 1,
@@ -16,7 +18,7 @@ export default function Home() {
             organizers: "Organizer 2",
             participantsAmount: 100,
             imageUrl: "ecology.jpg",
-            isEditable: false,
+            isEditable: true,
         },
         {
             id: 2,
@@ -28,7 +30,7 @@ export default function Home() {
             organizers: "Organizer 4",
             participantsAmount: 150,
             imageUrl: "ecology.jpg",
-            isEditable: false,
+            isEditable: true,
         },
         {
             id: 3,
@@ -40,7 +42,7 @@ export default function Home() {
             organizers: "Organizer 5",
             participantsAmount: 200,
             imageUrl: "ecology.jpg",
-            isEditable: false,
+            isEditable: true,
         },
         {
             id: 3,
@@ -52,7 +54,7 @@ export default function Home() {
             organizers: "Organizer 5",
             participantsAmount: 200,
             imageUrl: "ecology.jpg",
-            isEditable: false,
+            isEditable: true,
         },
         {
             id: 3,
@@ -64,7 +66,7 @@ export default function Home() {
             organizers: "Organizer 5",
             participantsAmount: 200,
             imageUrl: "ecology.jpg",
-            isEditable: false,
+            isEditable: true,
         },
         {
             id: 3,
@@ -76,16 +78,19 @@ export default function Home() {
             organizers: "Organizer 5",
             participantsAmount: 200,
             imageUrl: "ecology.jpg",
-            isEditable: false,
+            isEditable: true,
         },
     ];
-
     return (
-        <>
-            <Container>
-                <Header />
-                <EventGallery events={eventEntities} />
-            </Container>
-        </>
+        <Container>
+            <Header />
+            <Button className="default-300 mb-5" size="md">
+                <Link href="/add-event">Добавить мероприятие</Link>
+            </Button>
+            <h1 className="font-bold text-3xl mb-10">Ваши мероприятия</h1>
+            <EventGallery events={eventEntities} />
+        </Container>
     );
-}
+};
+
+export default Events;

@@ -3,9 +3,10 @@ export interface EventEntity {
     name: string;
     description: string;
     mapsId: number;
-    location: string
+    location: string;
     date: string;
     organizers: string;
     participantsAmount: number;
     imageUrl: string;
+    isEditable: boolean;
 }
