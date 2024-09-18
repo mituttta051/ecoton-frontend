@@ -11,9 +11,9 @@ interface EventCardProps {
 
 export default function EventCard(props: EventCardProps) {
     return (
-        <div className="flex justify-center min-w-[50px] font-sans">
+        <div className="flex justify-center min-w-[330px] font-sans w-full h-full">
             <div
-                className="bg-white border border-gray-200 rounded-[8px] flex flex-col content-between max-w-[335px] p-[22px] h-[490px] shadow-custom">
+                className="bg-white border border-gray-200 rounded-[8px] flex flex-col content-between max-w-[335px] p-[22px] min-h-[490px] shadow-custom">
                 <img
                     className="rounded-[5px]"
                     src={props.imageUrl}
